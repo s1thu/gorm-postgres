@@ -15,8 +15,8 @@ type Book struct {
 	AuthorID    uint           `gorm:"not null" json:"author_id"`
 	CreatedAt   time.Time      `json:"created_at"`
 	UpdatedAt   time.Time      `json:"updated_at"`
-	DeletedAt   gorm.DeletedAt `gorm:"index" json:"deleted_at,omitempty"`
+	DeletedAt   gorm.DeletedAt `gorm:"index" json:"deleted_at"`
 
 	// Relationship: Each book belongs to one author
-	Author Author `gorm:"foreignKey:AuthorID" json:"author,omitempty"`
+	Author Author `gorm:"foreignKey:AuthorID" json:"author"`
 }

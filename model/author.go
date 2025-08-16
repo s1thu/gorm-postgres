@@ -13,7 +13,7 @@ type Author struct {
 	Bio       string         `json:"bio"`
 	CreatedAt time.Time      `json:"created_at"`
 	UpdatedAt time.Time      `json:"updated_at"`
-	DeletedAt gorm.DeletedAt `gorm:"index" json:"deleted_at,omitempty"`
+	DeletedAt gorm.DeletedAt `gorm:"index" json:"deleted_at"`
 
 	// Relationship: One author can have many books
 	Books []Book `gorm:"foreignKey:AuthorID" json:"books,omitempty"`
